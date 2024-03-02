@@ -1,0 +1,17 @@
+.home {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  h3 {
+    font-size: 2rem;
+    font-family: 'Hack';
+    margin:3rem
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
