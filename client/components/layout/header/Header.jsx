@@ -3,7 +3,8 @@ import styles from "./Header.module.scss";
 const Header = ({ title }) => {
   return (
     <header className={styles.container}>
-      <h2 className={styles.title}>{title}</h2>
+      <img src="./logo-32x32.png" />
+      <h1 className={styles.title}>{title}</h1>
     </header>
   );
 };

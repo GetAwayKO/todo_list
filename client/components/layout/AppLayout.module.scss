@@ -1,6 +1,10 @@
 .wrapper {
   display: flex;
   background-color: #fff;
-  height: 100%;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  main{
+    margin-bottom: 1rem;
+  }
 }
