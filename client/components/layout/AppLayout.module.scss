@@ -2,9 +2,14 @@
   display: flex;
   background-color: #fff;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
-  main{
-    margin-bottom: 1rem;
+  main {
+    display: flex;
+    flex: 1 0 auto;
+    .container {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
   }
 }

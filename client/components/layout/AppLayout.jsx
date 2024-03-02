@@ -6,7 +6,9 @@ const AppLayout = ({ children }) => {
   return (
     <div className={styles.wrapper}>
       <Header title={"ToDo"} />
-      <main>{children}</main>
+      <main>
+        <div className={styles.container}>{children}</div>
+      </main>
       <Footer />
     </div>
   );
