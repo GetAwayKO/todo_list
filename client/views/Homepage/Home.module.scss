@@ -4,10 +4,13 @@
   text-align: center;
   flex-direction: column;
   height: 100%;
-  h3 {
-    font-size: 2rem;
-    font-family: 'Hack';
-    margin:3rem
+  padding: 2rem;
+  .titles {
+    margin: 2rem;
+    h2,
+    h3 {
+      font-family: "Hack";
+    }
   }
   .container {
     display: flex;
