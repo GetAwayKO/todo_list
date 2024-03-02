@@ -1,0 +1,17 @@
+.container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  background-color: #c8b6ff;
+  border-bottom: 1px solid #dee2e6;
+  .title {
+    font-family: 'Hack';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+}
