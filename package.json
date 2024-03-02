@@ -2,9 +2,11 @@
   "name": "todo_list",
   "version": "1.0.0",
   "description": "This is ToDo list and nothing more",
-  "main": "index.js",
+  "main": ".client/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "Vladislav Komarowsckikh",
   "license": "ISC",
@@ -20,6 +22,9 @@
     "@babel/preset-react": "^7.23.3",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.10.0",
+    "favicons": "^7.1.5",
+    "favicons-webpack-plugin": "^6.0.1",
+    "html-webpack-plugin": "^5.6.0",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
     "style-loader": "^3.3.4",
