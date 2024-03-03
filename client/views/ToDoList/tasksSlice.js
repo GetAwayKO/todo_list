@@ -7,14 +7,18 @@ const tasksSlice = createSlice({
   },
   reducers: {
     addTask: (state, action) => {
-      state.tasks.push({
-        id: new Date().toISOString,
+      state.list.push({
+        id: 0,
         title: action.payload.title,
         description: action.payload.description,
       });
     },
-    removeTask: (state, action) => {},
-    editTask: (state, action) => {},
+    removeTask: (state, action) => {
+      console.log("2");
+    },
+    editTask: (state, action) => {
+      console.log("1");
+    },
   },
 });
 

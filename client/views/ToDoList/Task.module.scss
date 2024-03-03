@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  form {
+    display: block;
+    text-align: left;
+    background-color: #bbd0ff;
+    padding: 1rem;
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        font-weight: 700;
+      }
+      input,
+      textarea {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        font-size: large;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        border: 0;
+        width: 100%;
+      }
+      input {
+        font-weight: 900;
+      }
+      textarea {
+        resize: none;
+        height: 4rem;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: end;
+      .button::hover {
+        background-color: #ffd6ff;
+      }
+    }
+  }
+  .addTask {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .task {
+    padding-bottom: 3rem;
+    .title {
+      display: flex;
+    }
+    .description {
+      display: flex;
+    }
+  }
+}
