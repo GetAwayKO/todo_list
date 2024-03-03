@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
-const Button = ({ className, children, ...rest }) => {
+import styles from "./Button.module.scss";
+const Button = ({ className = " ", children, ...rest }) => {
   return (
     <button className={cn(className, styles.button)} {...rest}>
       {children}
