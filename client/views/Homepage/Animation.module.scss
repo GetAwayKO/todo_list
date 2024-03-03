@@ -1,0 +1,35 @@
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  span {
+    position: relative;
+    opacity: 0;
+    margin-bottom: 1rem;
+    animation: slide 5s ease 1s infinite;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      visibility: visible;
+      margin-right: 200px;
+    }
+    25% {
+      opacity: 1;
+      margin-right: 0px;
+    }
+    50% {
+      margin-left: 0px;
+    }
+    75% {
+      text-decoration: line-through;
+    }
+    100% {
+      margin-left: 200px;
+      opacity: 0;
+    }
+  }
+}

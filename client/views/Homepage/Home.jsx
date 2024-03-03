@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.scss";
 import LinkButton from "../../components/button/LinkButton";
+import AnimationList from "./AnimationList";
 const Home = () => {
   return (
     <div className={styles.home}>
@@ -11,6 +12,7 @@ const Home = () => {
       <div className={styles.container}>
         <LinkButton to="/list">Get started</LinkButton>
       </div>
+      <AnimationList />
     </div>
   );
 };
