@@ -44,7 +44,7 @@ const NewTask = ({ onCancel }) => {
             onCancel();
           }}
         >
-          D
+          Add
         </Button>
       </div>
     </form>
