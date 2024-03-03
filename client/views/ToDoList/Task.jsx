@@ -4,7 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../../components/button/Button";
 import { addTask, removeTask, editTask } from "./tasksSlice";
 const Task = ({ task }) => {
-  return <div className={styles.task}>{JSON.stringify(task)}</div>;
+  return (
+    <div className={styles.task}>
+      <input type="checkbox"></input>
+      <div className={styles.text}>
+        <span className={styles.title}>{task.title}</span>
+        <hr />
+        <span className={styles.description}>{task.description}</span>
+      </div>
+    </div>
+  );
 };
 const NewTask = ({ onCancel }) => {
   let [task, setTask] = useState({ title: "", description: "" });
