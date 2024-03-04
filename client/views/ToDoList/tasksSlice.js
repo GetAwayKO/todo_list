@@ -11,7 +11,7 @@ const tasksSlice = createSlice({
         id: Date.now(),
         title: action.payload.title,
         description: action.payload.description,
-        status: false,
+        status: { timestamp: null, mark: false },
       });
     },
     removeTask: (state, action) => {
@@ -30,11 +30,12 @@ const tasksSlice = createSlice({
       };
     },
     changeStatus: (state, action) => {
-      const editedElement = state.list.findIndex(
+      const index = state.list.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(editedElement);
-      state.list[editedElement].status = !state.list[editedElement].status;
+      let status = state.list[index].status;
+      state.list[index].status.timestamp = status.timestamp || Date.now();
+      state.list[index].status.mark = !status.mark;
     },
   },
 });
