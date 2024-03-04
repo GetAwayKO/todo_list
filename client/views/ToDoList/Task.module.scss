@@ -1,16 +1,12 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 3rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+@import "../../utils/variables";
 
+.container {
   form {
     display: block;
     text-align: left;
     background-color: #bbd0ff;
     padding: 1rem;
+    margin-bottom: 1rem;
     .inputGroup {
       display: flex;
       flex-direction: column;
@@ -67,6 +63,7 @@
       height: 1.5rem;
     }
     .text {
+      margin-right: 1rem;
       margin-left: 1rem;
       width: 100%;
       .title,
@@ -76,11 +73,29 @@
         display: flex;
       }
       .title {
-        font-weight: 900;
+        border-bottom: 1px solid black;
+        font-weight: bold;
         font-size: 1.5rem;
+        padding-bottom: 0.5rem;
       }
       .description {
         font-size: 1.2rem;
+      }
+    }
+    .deleteBtn {
+      background-color: $deleteBtnBgColor;
+      color: $deleteBtnColor;
+      &:hover {
+        background-color: $deleteBtnBgColorHover;
+        color: $deleteBtnColorHover;
+      }
+    }
+    .editBtn {
+      background-color: $editBtnBgColor;
+      color: $editBtnColor;
+      &:hover {
+        background-color: $editBtnBgColorHover;
+        color: $editBtnColorHover;
       }
     }
   }
