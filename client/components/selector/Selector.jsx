@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./Selector.module.scss";
 import classNames from "classnames";
 
-const Selector = ({ onSelect, className = "", options, ...rest }) => {
+const Selector = ({ className = "", options, ...rest }) => {
   return (
     <select className={classNames(className, styles.selector)} {...rest}>
       {options.map((item, index) => {
@@ -19,6 +19,6 @@ const Selector = ({ onSelect, className = "", options, ...rest }) => {
 export default Selector;
 
 Selector.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.object),
+  options: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
 };

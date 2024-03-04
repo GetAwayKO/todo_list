@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../../components/button/Button";
 import { addTask, removeTask, editTask, changeStatus } from "./tasksSlice";
 import PropTypes from "prop-types";
+import { selectFilteredTasks, selectSortedTasks } from "./tasksSelector";
 
 const Task = ({ task, showEdit, setShowEdit, onDelete, onEdit, onCheck }) => {
   return (
@@ -12,7 +13,7 @@ const Task = ({ task, showEdit, setShowEdit, onDelete, onEdit, onCheck }) => {
         <div className={styles.task}>
           <input
             type="checkbox"
-            checked={task.status}
+            checked={task.status.mark}
             onChange={() => onCheck(task.id)}
           ></input>
           <div className={styles.text}>
@@ -108,16 +109,19 @@ FormTask.propTypes = {
   editableTask: PropTypes.object,
   mode: PropTypes.string,
 };
-
 const TaskList = ({
-  filter = () => {
+  filterPredicate = () => {
     return true;
   },
 }) => {
   const [showEditForm, setShowEditForm] = useState(null);
   const [showCreateForm, setShowCreateForm] = useState(false);
-  const tasks = useSelector((state) => state.tasks.list.filter(filter));
+
+  const tasks = useSelector((state) =>
+    selectFilteredTasks(state, filterPredicate)
+  );
   const dispatch = useDispatch();
+
   return (
     <>
       <div className={styles.container}>
