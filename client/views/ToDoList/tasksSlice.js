@@ -33,7 +33,7 @@ const tasksSlice = createSlice({
       const editedElement = state.list.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(editedElement)
+      console.log(editedElement);
       state.list[editedElement].status = !state.list[editedElement].status;
     },
   },

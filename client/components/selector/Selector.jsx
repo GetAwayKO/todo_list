@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import styles from "./Selector.module.scss";
 import classNames from "classnames";
 
-const Selector = ({ className = "", options, ...rest }) => {
+const Selector = ({ onSelect, className = "", options, ...rest }) => {
   return (
     <select className={classNames(className, styles.selector)} {...rest}>
       {options.map((item, index) => {
         return (
           <option value={item} key={index}>
-            {item.name}
+            {item}
           </option>
         );
       })}
