@@ -1,7 +1,16 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  text-align: center;
   padding-top: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  .containerSelect {
+    display: flex;
+    justify-content: start;
+  }
+  .header {
+    text-align: center;
+    font-family: "Hack";
+  }
 }
