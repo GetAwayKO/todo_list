@@ -8,13 +8,13 @@ export const FILTER = {
   Uncompleted: {
     name: "Uncompleted",
     filter: (item) => {
-      return item.status === false;
+      return item.status.mark === false;
     },
   },
   Completed: {
     name: "Completed",
     filter: (item) => {
-      return item.status === true;
+      return item.status.mark === true;
     },
   },
 };

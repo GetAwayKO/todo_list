@@ -18,7 +18,7 @@ const ToDoList = () => {
           options={OPTIONS}
         />
       </div>
-      <TaskList filter={FILTER[filterOption].filter} />
+      <TaskList filterPredicate={FILTER[filterOption].filter} />
     </div>
   );
 };

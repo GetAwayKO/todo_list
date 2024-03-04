@@ -13,6 +13,14 @@ const tasksSlice = createSlice({
         description: action.payload.description,
         status: { timestamp: null, mark: false },
       });
+      state.list = state.list
+        .filter((item) => !item.status.mark)
+        .sort((a, b) => a.id - b.id)
+        .concat(
+          state.list
+            .filter((item) => item.status.mark)
+            .sort((a, b) => a.status.timestamp - b.status.timestamp)
+        );
     },
     removeTask: (state, action) => {
       state.list = state.list.filter((item) => {
@@ -34,8 +42,18 @@ const tasksSlice = createSlice({
         (item) => item.id === action.payload.id
       );
       let status = state.list[index].status;
-      state.list[index].status.timestamp = status.timestamp || Date.now();
+      state.list[index].status.timestamp = state.list[index].status.timestamp
+        ? null
+        : Date.now();
       state.list[index].status.mark = !status.mark;
+      state.list = state.list
+        .filter((item) => !item.status.mark)
+        .sort((a, b) => a.id - b.id)
+        .concat(
+          state.list
+            .filter((item) => item.status.mark)
+            .sort((a, b) => a.status.timestamp - b.status.timestamp)
+        );
     },
   },
 });
