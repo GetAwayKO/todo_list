@@ -1,3 +1,4 @@
+@import "../../../utils/variables";
 .container {
   position: sticky;
   top: 0;
@@ -7,29 +8,25 @@
   padding: 0.5rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  background-color: #c8b6ff;
+  background-color: $headerBgColor;
   border-bottom: 1px solid #dee2e6;
   img {
     margin: 1rem;
   }
   .title {
-    font-family: "Hack";
+    font-family: $fontHack;
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
   }
-  .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-  }
-
+  .logo,
   .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+  }
+  .nav {
     a {
       text-decoration: none;
       color: #333;
