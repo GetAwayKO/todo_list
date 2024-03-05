@@ -4,8 +4,6 @@ services:
   client:
     image: komvd/todo_list
     pull_policy: "never"
-    env_file:
-      - .env
     restart: "no"
     user: "root"
     volumes:
