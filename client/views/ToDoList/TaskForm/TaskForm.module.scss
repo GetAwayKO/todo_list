@@ -1,0 +1,39 @@
+@import "../../../utils/variables";
+
+form {
+  display: block;
+  text-align: left;
+  background-color: #bbd0ff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: 0.5rem;
+      margin-left: 0.5rem;
+      font-weight: 700;
+    }
+    input,
+    textarea {
+      box-sizing: border-box;
+      padding: 0.5rem;
+      font-size: large;
+      border-radius: $borderRadius;
+      margin-bottom: 1rem;
+      border: 0;
+      width: 100%;
+    }
+    input {
+      font-weight: 900;
+    }
+    textarea {
+      resize: none;
+      height: 4rem;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: end;
+  }
+}

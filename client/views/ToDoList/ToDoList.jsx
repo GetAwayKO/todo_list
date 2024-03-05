@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ToDoList.module.scss";
-import TaskList from "./Task";
+import TaskList from "./TaskList/TaskList";
 import Selector from "../../components/selector/Selector";
 import { FILTER, OPTIONS } from "./ToDoList.const";
 
