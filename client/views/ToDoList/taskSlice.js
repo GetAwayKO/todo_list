@@ -1,9 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import sessionStorageObject from "../../utils/sessionStorage";
+
+const key = "list";
+const sessionStorage = new sessionStorageObject(key);
 
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    list: [],
+    list: sessionStorage.getData(key, []),
   },
   reducers: {
     addTask: (state, action) => {
@@ -14,11 +18,13 @@ const tasksSlice = createSlice({
         status: { timestamp: null, mark: false },
       });
       sortList(state);
+      sessionStorage.setData(key, state.list);
     },
     removeTask: (state, action) => {
       state.list = state.list.filter((item) => {
         return item.id !== action.payload.id;
       });
+      sessionStorage.setData(key, state.list);
     },
     editTask: (state, action) => {
       let payload = action.payload;
@@ -29,6 +35,7 @@ const tasksSlice = createSlice({
         ...state.list[editedElement],
         ...payload,
       };
+      sessionStorage.setData(key, state.list);
     },
     changeStatus: (state, action) => {
       const index = state.list.findIndex(
@@ -40,6 +47,7 @@ const tasksSlice = createSlice({
         : Date.now();
       state.list[index].status.mark = !status.mark;
       sortList(state);
+      sessionStorage.setData(key, state.list);
     },
   },
 });

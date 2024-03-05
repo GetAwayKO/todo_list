@@ -20,7 +20,6 @@ const TaskList = ({
     selectFilteredTasks(state, filterPredicate)
   );
   const dispatch = useDispatch();
-
   return (
     <>
       <div className={styles.container}>
