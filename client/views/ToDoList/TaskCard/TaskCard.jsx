@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styles from "./TaskCard.module.scss";
 import Button from "../../../components/button/Button";
 import TaskForm from "../TaskForm/TaskForm";
+import Checkbox from "../../../components/checkbox/Checkbox";
+
 const TaskCard = ({
   task,
   showEdit,
@@ -15,11 +17,10 @@ const TaskCard = ({
     <>
       {showEdit !== task.id && (
         <div className={styles.task}>
-          <input
-            type="checkbox"
+          <Checkbox
             checked={task.status.mark}
             onChange={() => onCheck(task.id)}
-          ></input>
+          ></Checkbox>
           <div className={styles.text}>
             <span className={styles.title}>{task.title}</span>
             <p className={styles.description}>{task.description}</p>

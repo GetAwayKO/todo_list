@@ -1,2 +1,12 @@
-.checkbox {
+@import "../../utils/variables";
+
+.formCheckContainer {
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    margin-top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    accent-color: green;
+    outline: 10px;
+  }
 }

@@ -3,14 +3,14 @@
 form {
   display: block;
   text-align: left;
-  background-color: #bbd0ff;
+  background-color: $formBgColor;
   padding: 1rem;
   margin-bottom: 1rem;
   .inputGroup {
     display: flex;
     flex-direction: column;
     label {
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
       margin-bottom: 0.5rem;
       margin-left: 0.5rem;
       font-weight: 700;
